@@ -21,18 +21,27 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(transaction, index) in transaction.data" :key="index">
+                <tr
+                  v-for="(transaction, index) in transaction.data"
+                  :key="index"
+                >
                   <td>{{ transaction.title }}</td>
                   <td>{{ transaction.amount }}</td>
                   <td>{{ transaction.type }}</td>
                   <td>
                     <div class="btn-group">
                       <router-link
-                        :to="{ name: 'transaction.edit', params: { id: transaction.id } }"
+                        :to="{
+                          name: 'transaction.edit',
+                          params: { id: transaction.id },
+                        }"
                         class="btn btn-sm btn-outline-info"
                         >Edit</router-link
                       >
-                      <button class="btn btn-sm btn-outline-danger">
+                      <button
+                        class="btn btn-sm btn-outline-danger"
+                        @click.prevent="destroy(transaction.id, index)"
+                      >
                         Delete
                       </button>
                     </div>
@@ -68,9 +77,21 @@ export default {
         });
     });
 
-    return {
-        transaction
+    function destroy(id, index) {
+      axios
+        .delete(`http://127.0.0.1:8000/api/transaction/${id}`)
+        .then(() => {
+          transaction.value.data.splice(index, 1);
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
     }
+
+    return {
+      transaction,
+      destroy
+    };
   },
 };
 </script>
