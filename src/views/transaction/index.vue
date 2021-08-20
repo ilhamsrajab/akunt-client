@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
-    <div class="d-flex p-2" style="background-color: #3A3379; width:1200px; height: 700px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+    <div class="d-flex p-2" style="background-color: #3A3379; width:1200px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
       <div class="position-absolute">
-        <svg width="700" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="750" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="599.294" cy="301.412" r="192.706" fill="white" fill-opacity="0.2"/>
           <circle cx="157.412" cy="198.353" r="156.912" stroke="white" stroke-opacity="0.2"/>
           <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="307" y="0" width="236" height="235">
@@ -28,8 +28,42 @@
         </g>
         </svg>
       </div>
-      <div class="text-light fs-1 fw-bold lh-sm p-5 d-flex justify-content-center align-items-center flex-fill flex-grow-1">
-        Kiri
+      <div class="text-light p-5 d-flex flex-wrap flex-column justify-content-end">
+              <div class="fw-bold text-center">
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+              </div>
+              <!-- <div class="fw-bold text-center">
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+              </div> -->
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+            </div>
+            <div class="carousel-item">
+              <div class="fw-bold text-center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis error quae, praesentium iure corporis laborum ratione voluptates repellendus esse ad nihil totam temporibus possimus quos id sapiente cum placeat odio?
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fw-bold text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit nostrum rerum odit impedit ipsa possimus! Eaque, debitis. Facilis dolorum inventore magnam officia suscipit. Accusamus assumenda soluta eligendi pariatur reiciendis.
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> -->
       </div>
       <div class="bg-white lh-sm d-flex flex-column p-5" style="border-radius: 35px; width: 540px; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
         <div class="fs-4 fw-bold align-self-end">
