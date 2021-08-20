@@ -1,55 +1,86 @@
 <template>
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-8">
-        <router-link
-          :to="{ name: 'transaction.create' }"
-          class="btn btn-primary btn-sm rounded shadow mb-3"
-          >Add</router-link
-        >
-
-        <div class="card rounded shadow">
-          <div class="card-header">Transaction List</div>
-          <div class="card-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Amount</th>
-                  <th>Type</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="(transaction, index) in transaction.data"
-                  :key="index"
-                >
-                  <td>{{ transaction.title }}</td>
-                  <td>{{ transaction.amount }}</td>
-                  <td>{{ transaction.type }}</td>
-                  <td>
-                    <div class="btn-group">
-                      <router-link
-                        :to="{
-                          name: 'transaction.edit',
-                          params: { id: transaction.id },
-                        }"
-                        class="btn btn-sm btn-outline-info"
-                        >Edit</router-link
-                      >
-                      <button
-                        class="btn btn-sm btn-outline-danger"
-                        @click.prevent="destroy(transaction.id, index)"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+  <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
+    <div class="d-flex p-2" style="background-color: #3A3379; width:1200px; height: 700px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+      <div class="position-absolute">
+        <svg width="700" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="599.294" cy="301.412" r="192.706" fill="white" fill-opacity="0.2"/>
+          <circle cx="157.412" cy="198.353" r="156.912" stroke="white" stroke-opacity="0.2"/>
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="307" y="0" width="236" height="235">
+          <circle cx="424.941" cy="117.176" r="117.176" fill="#C4C4C4"/>
+        </mask>
+        <g mask="url(#mask0)">
+          <line x1="269.647" y1="24.9118" x2="578.824" y2="24.9118" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="10.7942" x2="578.824" y2="10.7942" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="39.0294" x2="578.824" y2="39.0294" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="53.1471" x2="578.824" y2="53.1471" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="67.2647" x2="578.824" y2="67.2647" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="81.3824" x2="578.824" y2="81.3824" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="95.5" x2="578.824" y2="95.5" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="109.618" x2="578.824" y2="109.618" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="123.735" x2="578.824" y2="123.735" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="137.853" x2="578.824" y2="137.853" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="151.971" x2="578.824" y2="151.971" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="166.088" x2="578.824" y2="166.088" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="180.206" x2="578.824" y2="180.206" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="194.324" x2="578.824" y2="194.324" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="208.441" x2="578.824" y2="208.441" stroke="white" stroke-opacity="0.2"/>
+          <line x1="269.647" y1="222.559" x2="578.824" y2="222.559" stroke="white" stroke-opacity="0.2"/>
+        </g>
+        </svg>
+      </div>
+      <div class="text-light fs-1 fw-bold lh-sm p-5 d-flex justify-content-center align-items-center flex-fill flex-grow-1">
+        Kiri
+      </div>
+      <div class="bg-white lh-sm d-flex flex-column p-5" style="border-radius: 35px; width: 540px; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+        <div class="fs-4 fw-bold align-self-end">
+          Logotype
+        </div>
+        <div class="">
+          <p class="fs-1 fw-bold align-self-start" style="margin-top: 60px">
+            Login
+          </p>
+          <form class="my-4">
+            <div class="mb-3">
+              <label for="username" class="form-label fw-bold">Username</label>
+              <input type="username" class="form-control" id="username" placeholder="Masukan username..." style="background: #EEEEEE; height: 60px; border-radius: 20px; font-size: 14px; border:none">
+            </div>
+            <div class="mb-4 d-flex flex-wrap justify-content-between">
+              <label for="password" class="form-label fw-bold">Password</label>
+                <a class="link" style="font-size:12px; text-decoration:none; color: #3A3379">Lupa Password?</a>
+              <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 60px; border-radius: 20px; font-size: 14px; border:none">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 60px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
+          </form>
+          <div class="d-flex flex-wrap text-center justify-content-center" >
+            <span class="w-100" style="font-size:12px">
+              atau login dengan
+            </span>
+            <a href="http://google.com">
+              <div class="my-4 bg-white rounded-circle d-flex justify-content-center align-items-center" style="height:40px; width:40px; box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 512 512" xml:space="preserve" height="30px" >
+                <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                  c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                  C103.821,274.792,107.225,292.797,113.47,309.408z"/>
+                <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                  c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                  c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
+                <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                  c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                  c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
+                <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                  c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                  C318.115,0,375.068,22.126,419.404,58.936z"/>
+                </svg>
+              </div>
+            </a>
+            <span class="w-100 fw-bold" >
+              <a href="http://" style="font-size:14px; text-decoration:none; color: #3A3379">
+                Daftar Sekarang >
+              </a>
+            </span>
           </div>
+
         </div>
       </div>
     </div>
