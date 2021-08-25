@@ -78,7 +78,7 @@
         </div>
       </div>
       <!-- bagian kanan -->
-      <div class="bg-white lh-sm d-flex flex-column px-5 py-4" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+      <div class="bg-white lh-sm d-flex flex-column p-4" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
         <!-- logo -->
         <div class="fs-4 fw-bold align-self-end">
           Logotype

@@ -15,11 +15,11 @@ export default {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
   color: #444444;
   box-sizing: border-box;
 }
-
-/* #app {
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-} */
+  /* font-family: Poppins, Helvetica, Arial, sans-serif; */
 </style>
