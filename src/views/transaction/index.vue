@@ -1,8 +1,8 @@
 <template>
   <!-- container -->
-  <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
+  <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
     <!-- kotak -->
-    <div class="kotak d-flex p-2" style="background-color: #3A3379; width:1000px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+    <div class="kotak d-flex p-2">
       <!-- gambar -->
       <div class="position-absolute">
         <svg width="750" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,20 +32,9 @@
         </svg>
       </div>
       <!-- bagian kiri -->
-      <div class="text-light p-4 d-flex flex-column justify-content-end align-items-center" style="border-radius: 35px; width: 60%;">
-        <!-- <div id="da-slider" class="fw-bold text-center">
-          Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
-        </div>
-        <div class="mt-3 d-flex align-items-center align-self-center">
-          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
-          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
-          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
-        </div> -->
-        <!-- <div class="fw-bold bg-success text-center">
-          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
-        </div> -->
+      <div class="bagianKiri text-light px-5 d-flex flex-column justify-content-end align-items-center">
         <div id="textSlider" class="carousel slide d-flex flex-column" data-bs-ride="carousel">
-          <div class="order-2 carousel-indicators mt-3">
+          <div class="order-2 carousel-indicators mt-4">
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Text 1"></button>
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="1" aria-label="Text 2"></button>
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="2" aria-label="Text 3"></button>
@@ -53,41 +42,33 @@
           <div class="order-1 carousel-inner d-flex align-items-end">
             <div class="carousel-item active">
               <div class="fw-bold text-center">
-                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.1
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
               </div>
             </div>
             <div class="carousel-item">
               <div class="fw-bold text-center">
-                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.2
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.
               </div>
             </div>
             <div class="carousel-item">
               <div class="fw-bold text-center">
-                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.3
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque.
               </div>
             </div>
           </div>
-          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button> -->
         </div>
       </div>
       <!-- bagian kanan -->
-      <div class="bg-white lh-sm d-flex flex-column p-4" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+      <div class="bagianKanan bg-white lh-sm d-flex flex-column p-4">
         <!-- logo -->
         <div class="fs-4 fw-bold align-self-end">
           Logotype
         </div>
 
         <!-- login form -->
-        <div class="">
-          <p class="fs-1 fw-bold align-self-start" style="margin-top: 15px">
-            <a style="font-size :28px"> Login </a> 
+        <div class="formLogin">
+          <p class="fs-2 fw-bold align-self-start pt-4">
+            Login 
           </p>
           <form class="my-4">
             <div class="mb-3">
@@ -134,7 +115,6 @@
               </a>
             </span>
           </div>
-
         </div>
       </div>
     </div>
@@ -187,6 +167,31 @@ export default {
   -moz-user-select: none; 
   -ms-user-select: none; 
   user-select: none;
+}
+
+.container-fluid {
+  background-color: #EEEEEE;
+  background-image: url('assets/');
+}
+
+.container-fluid .kotak {
+  background-color: #3A3379; 
+  width:1000px; 
+  border-radius:40px; 
+  overflow:hidden; 
+  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);
+}
+
+.container-fluid .bagianKiri {
+  border-radius: 35px; 
+  width: 60%;
+}
+
+.container-fluid .bagianKanan {
+  border-radius: 35px; 
+  width: 40%; 
+  z-index:99;
+  box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); 
 }
 
 #textSlider .carousel-indicators {
