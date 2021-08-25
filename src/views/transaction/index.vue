@@ -1,6 +1,9 @@
 <template>
+  <!-- container -->
   <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
+    <!-- kotak -->
     <div class="d-flex p-2" style="background-color: #3A3379; width:1200px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+      <!-- gambar lingkaran -->
       <div class="position-absolute">
         <svg width="750" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="599.294" cy="301.412" r="192.706" fill="white" fill-opacity="0.2"/>
@@ -28,19 +31,20 @@
         </g>
         </svg>
       </div>
-      <div class="text-light p-5 d-flex flex-wrap flex-column justify-content-end align-items-center">
-        <div class="fw-bold text-center" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+      <!-- bagian kiri -->
+      <div class="text-light p-5 d-flex flex-column justify-content-end align-items-center" style="border-radius: 35px; width: 60%;">
+        <!-- <div class="fw-bold bg-info text-center">
           Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
         </div>
         <div class="mt-3 d-flex align-items-center align-self-center">
           <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
           <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
           <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
-        </div>
-        <!-- <div class="fw-bold text-center">
+        </div> -->
+        <!-- <div class="fw-bold bg-success text-center">
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
         </div> -->
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -48,6 +52,9 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <div class="fw-bold text-center">
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+              </div>
             </div>
             <div class="carousel-item">
               <div class="fw-bold text-center">
@@ -60,20 +67,25 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
-        </div> -->
+          </button> -->
+        </div>
       </div>
-      <div class="bg-white lh-sm d-flex flex-column p-5" style="border-radius: 35px; width: 540px; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+
+      <!-- bagian kanan -->
+      <div class="bg-white lh-sm d-flex flex-column p-5" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+        <!-- logo -->
         <div class="fs-4 fw-bold align-self-end">
           Logotype
         </div>
+
+        <!-- login form -->
         <div class="">
           <p class="fs-1 fw-bold align-self-start" style="margin-top: 60px">
             Login
@@ -85,11 +97,13 @@
             </div>
             <div class="mb-4 d-flex flex-wrap justify-content-between">
               <label for="password" class="form-label fw-bold">Password</label>
-                <a class="link" style="font-size:12px; text-decoration:none; color: #3A3379">Lupa Password?</a>
+                <a href="#" class="link" style="font-size:12px; text-decoration:none; color: #3A3379">Lupa Password?</a>
               <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 60px; border-radius: 20px; font-size: 14px; border:none">
             </div>
             <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 60px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
           </form>
+
+          <!-- login google -->
           <div class="d-flex flex-wrap text-center justify-content-center" >
             <span class="w-100 mb-4" style="font-size:12px">
               atau login dengan
@@ -113,8 +127,10 @@
                 </svg>
               </div>
             </a>
+
+            <!-- daftar  -->
             <span class="w-100 fw-bold mt-4" >
-              <a href="http://" style="font-size:14px; text-decoration:none; color: #3A3379">
+              <a href="#" style="font-size:14px; text-decoration:none; color: #3A3379">
                 Daftar Sekarang >
               </a>
             </span>
@@ -129,6 +145,7 @@
 <script>
 import axios from "axios";
 import { onMounted, ref } from "vue";
+
 
 export default {
   setup() {
@@ -165,3 +182,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+* {
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+</style>
