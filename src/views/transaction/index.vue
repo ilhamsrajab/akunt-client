@@ -2,7 +2,7 @@
   <!-- container -->
   <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
     <!-- kotak -->
-    <div class="d-flex p-2" style="background-color: #3A3379; width:1000px; height :550px ; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+    <div class="d-flex p-2" style="background-color: #3A3379; width:1000px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
       <!-- gambar -->
       <div class="position-absolute">
         <svg width="750" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@
             </div>
             <div class="mb-4 d-flex flex-wrap justify-content-between">
               <label for="password" class="form-label fw-bold">Password</label>
-                <a class="link" style="font-size:10px; text-decoration:none; color: #3A3379; margin-top : 10px" >Lupa Password?</a>
+                <a href="#" class="link" style="font-size:12px; text-decoration:none; color: #3A3379;" >Lupa Password?</a>
               <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 40px; border-radius: 20px; font-size: 12px; border:none">
             </div>
             <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 40px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
