@@ -40,17 +40,17 @@
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="2" aria-label="Text 3"></button>
           </div>
           <div class="order-1 carousel-inner d-flex align-items-end">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="5000">
               <div class="fw-bold text-center">
                 Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
               <div class="fw-bold text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="5000">
               <div class="fw-bold text-center">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque.
               </div>
@@ -73,23 +73,23 @@
           <form class="my-4">
             <div class="mb-3">
               <label for="username" class="form-label fw-bold">Username</label>
-              <input type="username" class="form-control" id="username" placeholder="Masukan username..." style="background: #EEEEEE; height: 50px; border-radius: 20px; font-size: 12px; border:none">
+              <input type="username" class="form-control" id="username" placeholder="Masukan username...">
             </div>
             <div class="mb-4 d-flex flex-wrap justify-content-between">
               <label for="password" class="form-label fw-bold">Password</label>
-                <a href="#" class="link" style="font-size:12px; text-decoration:none; color: #3A3379;" >Lupa Password?</a>
-              <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 50px; border-radius: 20px; font-size: 12px; border:none">
+                <a href="#" class="lupaPass link">Lupa Password?</a>
+              <input type="password" class="form-control" id="password" placeholder="Masukan password...">
             </div>
-            <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 50px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
+            <button type="submit" class="submit btn btn-primary w-100 fw-bold">Login</button>
           </form>
 
           <!-- login google -->
-          <div class="d-flex flex-wrap text-center justify-content-center" >
-            <span class="w-100 mb-4" style="font-size:12px">
+          <div class="d-flex flex-wrap flex-column text-center justify-content-center align-items-center" >
+            <span class="mb-4" style="font-size:12px">
               atau login dengan
             </span>
             <a href="http://google.com">
-              <div class="bg-white rounded-circle d-flex justify-content-center align-items-center" style="height:40px; width:40px; box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);">
+              <div class="btnGoogle bg-white rounded-circle d-flex justify-content-center align-items-center">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 512 512" xml:space="preserve" height="30px" >
                 <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
@@ -109,8 +109,8 @@
             </a>
 
             <!-- daftar  -->
-            <span class="w-100 fw-bold mt-4" >
-              <a href="#" style="font-size:14px; text-decoration:none; color: #3A3379">
+            <span class="fw-bold mt-4" >
+              <a class="btnDaftar" href="#">
                 Daftar Sekarang >
               </a>
             </span>
@@ -171,7 +171,7 @@ export default {
 
 .container-fluid {
   background-color: #EEEEEE;
-  background-image: url('assets/');
+  /* background-image: url('assets/'); */
 }
 
 .container-fluid .kotak {
@@ -181,6 +181,7 @@ export default {
   overflow:hidden; 
   box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);
 }
+
 
 .container-fluid .bagianKiri {
   border-radius: 35px; 
@@ -192,6 +193,98 @@ export default {
   width: 40%; 
   z-index:99;
   box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); 
+  -webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.container-fluid .bagianKanan:hover {
+  box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.3); 
+}
+
+.formLogin input {
+  background: #EEEEEE; 
+  height: 50px; 
+  border-radius: 20px; 
+  font-size: 12px; 
+  border:none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.formLogin .lupaPass {
+  font-size:12px; 
+  text-decoration:none; 
+  color: #3A3379;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.formLogin .lupaPass::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: #3A3379;
+  transition: 300ms;
+}
+
+.formLogin .lupaPass:hover::after {
+  width: 100%;
+}
+
+.formLogin .submit {
+  background: #3A3379; 
+  height: 50px; 
+  border-radius: 20px; 
+  font-size: 16px; 
+  border:none; 
+  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.formLogin .submit:hover {
+  background: #2b2268; 
+  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.4);
+}
+
+.formLogin .btnGoogle {
+  height:40px; 
+  width:40px; 
+  box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.formLogin .btnGoogle:hover {
+  box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.4);
+}
+
+.formLogin .btnDaftar {
+  font-size:14px; 
+  color: #3A3379;
+  text-decoration:none; 
+}
+
+.formLogin .btnDaftar::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #3A3379;
+  transition: 300ms;
+}
+
+.formLogin .btnDaftar:hover::after {
+  width: 100%;
 }
 
 #textSlider .carousel-indicators {
