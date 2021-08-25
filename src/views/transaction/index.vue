@@ -2,7 +2,7 @@
   <!-- container -->
   <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" style="background-color: #EEEEEE;">
     <!-- kotak -->
-    <div class="d-flex p-2" style="background-color: #3A3379; width:1000px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
+    <div class="kotak d-flex p-2" style="background-color: #3A3379; width:1000px; border-radius:40px; overflow:hidden; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);">
       <!-- gambar -->
       <div class="position-absolute">
         <svg width="750" viewBox="0 0 792 495" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@
         </div>
       </div>
       <!-- bagian kanan -->
-      <div class="bg-white lh-sm d-flex flex-column p-5" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
+      <div class="bg-white lh-sm d-flex flex-column px-5 py-4" style="border-radius: 35px; width: 40%; box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); z-index:99">
         <!-- logo -->
         <div class="fs-4 fw-bold align-self-end">
           Logotype
@@ -92,14 +92,14 @@
           <form class="my-4">
             <div class="mb-3">
               <label for="username" class="form-label fw-bold">Username</label>
-              <input type="username" class="form-control" id="username" placeholder="Masukan username..." style="background: #EEEEEE; height: 40px; border-radius: 20px; font-size: 12px; border:none">
+              <input type="username" class="form-control" id="username" placeholder="Masukan username..." style="background: #EEEEEE; height: 50px; border-radius: 20px; font-size: 12px; border:none">
             </div>
             <div class="mb-4 d-flex flex-wrap justify-content-between">
               <label for="password" class="form-label fw-bold">Password</label>
                 <a href="#" class="link" style="font-size:12px; text-decoration:none; color: #3A3379;" >Lupa Password?</a>
-              <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 40px; border-radius: 20px; font-size: 12px; border:none">
+              <input type="password" class="form-control" id="password" placeholder="Masukan password..." style="background: #EEEEEE; height: 50px; border-radius: 20px; font-size: 12px; border:none">
             </div>
-            <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 40px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
+            <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 50px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
           </form>
 
           <!-- login google -->
