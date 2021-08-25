@@ -28,13 +28,18 @@
         </g>
         </svg>
       </div>
-      <div class="text-light p-5 d-flex flex-wrap flex-column justify-content-end">
-              <div class="fw-bold text-center">
-                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
-              </div>
-              <!-- <div class="fw-bold text-center">
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
-              </div> -->
+      <div class="text-light p-5 d-flex flex-wrap flex-column justify-content-end align-items-center">
+        <div class="fw-bold text-center" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+          Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+        </div>
+        <div class="mt-3 d-flex align-items-center align-self-center">
+          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
+          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
+          <div class="col bg-white rounded-circle mx-1" style="height:8px; width:8px;"></div>
+        </div>
+        <!-- <div class="fw-bold text-center">
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+        </div> -->
         <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -86,11 +91,11 @@
             <button type="submit" class="btn btn-primary w-100 fw-bold" style="background: #3A3379; height: 60px; border-radius: 20px; font-size: 16px; border:none; box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);">Login</button>
           </form>
           <div class="d-flex flex-wrap text-center justify-content-center" >
-            <span class="w-100" style="font-size:12px">
+            <span class="w-100 mb-4" style="font-size:12px">
               atau login dengan
             </span>
             <a href="http://google.com">
-              <div class="my-4 bg-white rounded-circle d-flex justify-content-center align-items-center" style="height:40px; width:40px; box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);">
+              <div class="bg-white rounded-circle d-flex justify-content-center align-items-center" style="height:40px; width:40px; box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 512 512" xml:space="preserve" height="30px" >
                 <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
@@ -108,7 +113,7 @@
                 </svg>
               </div>
             </a>
-            <span class="w-100 fw-bold" >
+            <span class="w-100 fw-bold mt-4" >
               <a href="http://" style="font-size:14px; text-decoration:none; color: #3A3379">
                 Daftar Sekarang >
               </a>
