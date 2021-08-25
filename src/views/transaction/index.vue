@@ -32,8 +32,8 @@
         </svg>
       </div>
       <!-- bagian kiri -->
-      <div class="text-light p-5 d-flex flex-column justify-content-end align-items-center" style="border-radius: 35px; width: 60%;">
-        <!-- <div class="fw-bold bg-info text-center">
+      <div class="text-light p-4 d-flex flex-column justify-content-end align-items-center" style="border-radius: 35px; width: 60%;">
+        <!-- <div id="da-slider" class="fw-bold text-center">
           Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
         </div>
         <div class="mt-3 d-flex align-items-center align-self-center">
@@ -44,26 +44,26 @@
         <!-- <div class="fw-bold bg-success text-center">
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaCari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
         </div> -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div id="textSlider" class="carousel slide d-flex flex-column" data-bs-ride="carousel">
+          <div class="order-2 carousel-indicators mt-3">
+            <button type="button" data-bs-target="#textSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Text 1"></button>
+            <button type="button" data-bs-target="#textSlider" data-bs-slide-to="1" aria-label="Text 2"></button>
+            <button type="button" data-bs-target="#textSlider" data-bs-slide-to="2" aria-label="Text 3"></button>
           </div>
-          <div class="carousel-inner">
+          <div class="order-1 carousel-inner d-flex align-items-end">
             <div class="carousel-item active">
               <div class="fw-bold text-center">
-                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.1
               </div>
             </div>
             <div class="carousel-item">
               <div class="fw-bold text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis error quae, praesentium iure corporis laborum ratione voluptates repellendus esse ad nihil totam temporibus possimus quos id sapiente cum placeat odio?
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.2
               </div>
             </div>
             <div class="carousel-item">
               <div class="fw-bold text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit nostrum rerum odit impedit ipsa possimus! Eaque, debitis. Facilis dolorum inventore magnam officia suscipit. Accusamus assumenda soluta eligendi pariatur reiciendis.
+                Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.3
               </div>
             </div>
           </div>
@@ -145,7 +145,6 @@
 import axios from "axios";
 import { onMounted, ref } from "vue";
 
-
 export default {
   setup() {
     // reactive state
@@ -190,7 +189,18 @@ export default {
   user-select: none;
 }
 
-@media (max-width: 1399.98px) { 
+#textSlider .carousel-indicators {
+  position: relative;
+}
+
+#textSlider .carousel-indicators [data-bs-target] {
+  width:8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
   .kotak {
     width: 1200px;
   }
