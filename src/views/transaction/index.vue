@@ -122,10 +122,16 @@
         </div> -->
 
         <!-- Daftar -->
-        <div class="d-flex flex-column maskedOverflow">
-          <!-- logo -->
-          <div class="fs-4 fw-bold align-self-end">
-            Logotype
+        <div class="fs-4 d-flex flex-column">
+          <div class="d-flex justify-content-between">
+            <!-- icon back -->
+            <div class="align-self-start">
+              <iconify-icon icon="tableEdit24Filled" :inline="true" />!
+            </div>
+            <!-- logo -->
+            <div class="fs-4 fw-bold align-self-end">
+              Logotype
+            </div>
           </div>
 
           <!-- login form -->
@@ -272,44 +278,6 @@ export default {
 
 .container-fluid .bagianKanan:hover {
   box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.3); 
-}
-
-.container-fluid .bagianKanan .maskedOverflow {
-   /* mask fade distance, for use in mask calculations */
-  --mask-height: 32px;
-
-  /* Need to make sure container has bottom space,
-  otherwise content at the bottom is always faded out */
-  padding-bottom: var(--mask-height);
-
-  /* The CSS mask */
-
-  /* The content mask is a linear gradient from top to bottom */
-  --mask-image-content: linear-gradient(
-    to bottom,
-    transparent,
-    black var(--mask-height),
-    black calc(100% - var(--mask-height)),
-    transparent
-  );
-
-  /* Here we scale the content gradient to the width of the container 
-  minus the scrollbar width. The height is the full container height */
-  --mask-size-content: calc(100%) 100%;
-
-  /* The scrollbar mask is a black pixel */
-  --mask-image-scrollbar: linear-gradient(black, black);
-
-  /* Apply the mask image and mask size variables */
-  mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
-  mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
-
-  /* Position the content gradient in the top left, and the 
-  scroll gradient in the top right */
-  mask-position: 0 0, 100% 0;
-
-  /* We don't repeat our mask images */
-  mask-repeat: no-repeat, no-repeat;
 }
 
 .formLogin input {
