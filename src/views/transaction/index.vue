@@ -34,23 +34,23 @@
       <!-- bagian kiri -->
       <div class="bagianKiri text-light px-5 d-flex flex-column justify-content-end align-items-center">
         <div id="textSlider" class="carousel slide d-flex flex-column" data-bs-ride="carousel">
-          <div class="order-2 carousel-indicators mt-4">
+          <div class="order-2 carousel-indicators">
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Text 1"></button>
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="1" aria-label="Text 2"></button>
             <button type="button" data-bs-target="#textSlider" data-bs-slide-to="2" aria-label="Text 3"></button>
           </div>
-          <div class="order-1 carousel-inner d-flex align-items-end">
-            <div class="carousel-item active" data-bs-interval="5000">
+          <div class="order-1 carousel-inner d-flex align-items-end mb-4">
+            <div class="carousel-item active" data-bs-interval="2000">
               <div class="fw-bold text-center">
                 Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="2000">
               <div class="fw-bold text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="2000">
               <div class="fw-bold text-center">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque.
               </div>
@@ -58,62 +58,126 @@
           </div>
         </div>
       </div>
+      
       <!-- bagian kanan -->
-      <div class="bagianKanan bg-white lh-sm d-flex flex-column p-4">
-        <!-- logo -->
-        <div class="fs-4 fw-bold align-self-end">
-          Logotype
-        </div>
+      <div class="bagianKanan bg-white lh-sm p-4">
+        <!-- Login -->
+        <!-- <div class="d-flex flex-column">
+          logo
+          <div class="fs-4 fw-bold align-self-end">
+            Logotype
+          </div>
 
-        <!-- login form -->
-        <div class="formLogin">
-          <p class="fs-2 fw-bold align-self-start pt-4">
-            Login 
-          </p>
-          <form class="my-4">
-            <div class="mb-3">
-              <label for="username" class="form-label fw-bold">Username</label>
-              <input type="username" class="form-control" id="username" placeholder="Masukan username...">
-            </div>
-            <div class="mb-4 d-flex flex-wrap justify-content-between">
-              <label for="password" class="form-label fw-bold">Password</label>
-                <a href="#" class="lupaPass link">Lupa Password?</a>
-              <input type="password" class="form-control" id="password" placeholder="Masukan password...">
-            </div>
-            <button type="submit" class="submit btn btn-primary w-100 fw-bold">Login</button>
-          </form>
-
-          <!-- login google -->
-          <div class="d-flex flex-wrap flex-column text-center justify-content-center align-items-center" >
-            <span class="mb-4" style="font-size:12px">
-              atau login dengan
-            </span>
-            <a href="http://google.com">
-              <div class="btnGoogle bg-white rounded-circle d-flex justify-content-center align-items-center">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 512 512" xml:space="preserve" height="30px" >
-                <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
-                  c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-                  C103.821,274.792,107.225,292.797,113.47,309.408z"/>
-                <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
-                  c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
-                  c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
-                <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
-                  c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-                  c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
-                <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
-                  c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-                  C318.115,0,375.068,22.126,419.404,58.936z"/>
-                </svg>
+          login form
+          <div class="formLogin">
+            <p class="fs-2 fw-bold align-self-start pt-4">
+              Login 
+            </p>
+            <form class="my-4">
+              <div class="mb-3">
+                <label for="username" class="form-label fw-bold">Username</label>
+                <input type="username" class="form-control" id="username" placeholder="Masukan username...">
               </div>
-            </a>
+              <div class="mb-4 d-flex flex-wrap justify-content-between">
+                <label for="password" class="form-label fw-bold">Password</label>
+                  <a href="#" class="lupaPass link">Lupa Password?</a>
+                <input type="password" class="form-control" id="password" placeholder="Masukan password...">
+              </div>
+              <button type="submit" class="submit btn btn-primary w-100 fw-bold">Login</button>
+            </form>
 
-            <!-- daftar  -->
-            <span class="fw-bold mt-4" >
-              <a class="btnDaftar" href="#">
-                Daftar Sekarang >
+            login google
+            <div class="d-flex flex-wrap flex-column text-center justify-content-center align-items-center" >
+              <span class="mb-4" style="font-size:12px">
+                atau login dengan
+              </span>
+              <a href="http://google.com">
+                <div class="btnGoogle bg-white rounded-circle d-flex justify-content-center align-items-center">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512 512" xml:space="preserve" height="30px" >
+                  <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                    C103.821,274.792,107.225,292.797,113.47,309.408z"/>
+                  <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
+                  <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
+                  <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                    C318.115,0,375.068,22.126,419.404,58.936z"/>
+                  </svg>
+                </div>
               </a>
-            </span>
+
+              daftar 
+              <span class="fw-bold mt-4" >
+                <a class="btnDaftar" href="#">
+                  Daftar Sekarang >
+                </a>
+              </span>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Daftar -->
+        <div class="d-flex flex-column maskedOverflow">
+          <!-- logo -->
+          <div class="fs-4 fw-bold align-self-end">
+            Logotype
+          </div>
+
+          <!-- login form -->
+          <div class="formLogin">
+            <p class="fs-2 fw-bold align-self-start pt-4">
+              Daftar 
+            </p>
+            <form class="my-4">
+              <div class="mb-2">
+                <label for="emailDaftar" class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" id="emailDaftar" placeholder="Masukan email...">
+              </div>
+              <div class="mb-2">
+                <label for="usernameDaftar" class="form-label fw-bold">Username</label>
+                <input type="username" class="form-control" id="usernameDaftar" placeholder="Masukan username...">
+              </div>
+              <div class="mb-2">
+                <label for="passwordDaftar" class="form-label fw-bold">Password</label>
+                <input type="password" class="form-control" id="passwordDaftar" placeholder="Masukan password...">
+              </div>
+              <div class="mb-4">
+                <label for="passwordDaftarConfirm" class="form-label fw-bold">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="passwordDaftarConfirm" placeholder="Masukan password kembali...">
+              </div>
+              <button type="submit" class="submit btn btn-primary w-100 fw-bold">Daftar</button>
+            </form>
+
+            <!-- daftar google -->
+            <div class="d-flex flex-wrap flex-column text-center justify-content-center align-items-center" >
+              <span class="mb-4" style="font-size:12px">
+                atau daftar dengan
+              </span>
+              <a href="http://google.com">
+                <div class="btnGoogle bg-white rounded-circle d-flex justify-content-center align-items-center">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512 512" xml:space="preserve" height="30px" >
+                  <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                    C103.821,274.792,107.225,292.797,113.47,309.408z"/>
+                  <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
+                  <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
+                  <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                    C318.115,0,375.068,22.126,419.404,58.936z"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -177,8 +241,8 @@ export default {
 .container-fluid .kotak {
   background-color: #3A3379; 
   width:1000px; 
+  height: 580px;
   border-radius:40px; 
-  overflow:hidden; 
   box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);
 }
 
@@ -192,6 +256,9 @@ export default {
   border-radius: 35px; 
   width: 40%; 
   z-index:99;
+  overflow-y:auto; 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); 
   -webkit-transition: 1s ease-out;
   -moz-transition: 1s ease-out;
@@ -199,8 +266,50 @@ export default {
   transition: 1s ease-out;
 }
 
+.container-fluid .bagianKanan::-webkit-scrollbar {
+  display:none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
 .container-fluid .bagianKanan:hover {
   box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.3); 
+}
+
+.container-fluid .bagianKanan .maskedOverflow {
+   /* mask fade distance, for use in mask calculations */
+  --mask-height: 32px;
+
+  /* Need to make sure container has bottom space,
+  otherwise content at the bottom is always faded out */
+  padding-bottom: var(--mask-height);
+
+  /* The CSS mask */
+
+  /* The content mask is a linear gradient from top to bottom */
+  --mask-image-content: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--mask-height),
+    black calc(100% - var(--mask-height)),
+    transparent
+  );
+
+  /* Here we scale the content gradient to the width of the container 
+  minus the scrollbar width. The height is the full container height */
+  --mask-size-content: calc(100%) 100%;
+
+  /* The scrollbar mask is a black pixel */
+  --mask-image-scrollbar: linear-gradient(black, black);
+
+  /* Apply the mask image and mask size variables */
+  mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+  mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+
+  /* Position the content gradient in the top left, and the 
+  scroll gradient in the top right */
+  mask-position: 0 0, 100% 0;
+
+  /* We don't repeat our mask images */
+  mask-repeat: no-repeat, no-repeat;
 }
 
 .formLogin input {
@@ -213,6 +322,10 @@ export default {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.formLogin label {
+  font-size: 12px;
 }
 
 .formLogin .lupaPass {
@@ -298,9 +411,7 @@ export default {
 }
 
 
-@media only screen and (min-width: 768px) {
-  .kotak {
-    width: 1200px;
-  }
+@media only screen and (min-width: 1399px) {
+
 }
 </style>
